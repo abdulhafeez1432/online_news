@@ -61,7 +61,7 @@
                                             <div class="overlay-post-content">
                                                 <div class="post-content">
                                                     <h2 class="post-title lg">
-                                                        <a href="#">{{ n.title }}</a>
+                                                        <a href="{% url 'news_details' n.id %}">{{ n.title }}</a>
                                                     </h2>
                                                     <ul class="post-meta-info">
                                                         <li class="author">
@@ -109,7 +109,7 @@
 								<div class="item">
 									<div class="ts-post-thumb">
 										<a class="post-cat ts-blue-bg" href="#">Entertainment</a>
-										<a href="#">
+										<a href="{% url 'news_details' e.id %}">
 											<img class="img-fluid" src={{e.image_url}} alt="">
 										</a>
 									</div>
@@ -117,7 +117,7 @@
 									<div class="overlay-post-content">
 										<div class="post-content">
 											<h3 class="post-title">
-												<a href="#">{{e.title}}</a>
+												<a href="{% url 'news_details' e.id %}">{{e.title}}</a>
 											</h3>
 											<ul class="post-meta-info">
 												<li>
@@ -161,14 +161,14 @@
 								<div class="item">
 										<div class="ts-post-thumb">
 
-											<a href="#">
+											<a href="{% url 'news_details' h2.id %}">
 												<img class="img-fluid" src={{h2.image_url}} alt="">
 											</a>
 										</div>
 										<div class="post-content">
 											<a class="cat-name purple-color" href="#">{{h2.category.name}}</a>
 											<h3 class="post-title md">
-												<a href="#">{{h2.title}}</a>
+												<a href="{% url 'news_details' h2.id %}">{{h2.title}}</a>
 											</h3>
 											<ul class="post-meta-info">
 												<li>
@@ -192,13 +192,13 @@
 									<div class="col-lg-6">
 											<div class="item mb-20">
 												<div class="ts-post-thumb">
-													<a href="#">
+													<a href="{% url 'news_details' h.id %}">
 														<img class="img-fluid" src={{h.image_url}} alt="">
 													</a>
 												</div>
 												<div class="post-content">
 													<h3 class="post-title">
-														<a href="#">{{h.title}}</a>
+														<a href="{% url 'news_details' h.id %}">{{h.title}}</a>
 													</h3>
 													<span class="post-date-info">
 														<i class="fa fa-clock-o"></i>
@@ -237,7 +237,7 @@
 												<div class="post-content">
 												<a href="#" class="cat-name">{{s1.category.name}}</a>
 													<h3 class="post-title md">
-														<a href="#">{{s1.title}}</a>
+														<a href="{% url 'news_details' s1.id %}">{{s1.title}}</a>
 													</h3>
 													<ul class="post-meta-info">
 														
@@ -261,13 +261,13 @@
 									{% for s2 in sport2 %}
 									<div class="item">
 											<div class="ts-post-thumb">
-												<a href="#">
+												<a href="{% url 'news_details' s2.id %}">
 													<img class="img-fluid" src={{s2.image_url}} alt="">
 												</a>
 											</div>
 											<div class="post-content">
 												<h3 class="post-title">
-													<a href="#">{{s2.title}}</a>
+													<a href="{% url 'news_details' s2.id %}">{{s2.title}}</a>
 												</h3>
 												<span class="post-date-info">
 													<i class="fa fa-clock-o"></i>
@@ -454,30 +454,6 @@
 						</div>
 						<!-- widgets end-->
 
-						<div class="widgets ts-grid-box widgets-populer-post border">
-							<h3 class="widget-title">
-								Most Viewed
-							</h3>
-							<div class="item">
-								<div class="ts-post-thumb">
-									<a class="post-cat ts-yellow-bg" href="#">Food</a>
-									<a href="#">
-										<img class="img-fluid" src="images/news/foods/food7.jpg" alt="">
-									</a>
-								</div>
-								<div class="post-content">
-									<h3 class="post-title">
-										<a href="#">Tourism in Dubai is booming by international tourist</a>
-									</h3>
-									<span class="post-date-info">
-										<i class="fa fa-clock-o"></i>
-										March 21, 2019
-									</span>
-								</div>
-							</div>
-
-							
-						</div>
 						<div class="ts-grid-box widgets category-list-item">
                         <h2 class="widget-title">Categories</h2>
                         <ul class="category-list">

@@ -40,7 +40,7 @@ def home(request):
     sport_news = requests.get(f'http://api.allnigerianewspapers.com.ng/api/allnewsbycategory/sport')
     sport1 = sport_news.json()[:2]
     sport2 = sport_news.json()[3:7]
-    context = {"news2": news2,"sport2": sport2,"sport1": sport1, "fashion2": fashion2,"fashion": fashion,"entertainment": entertainment, "health1": health1, "health2": health2, "allnews": allnews, "category": category, "news": news, "site": site, "headlines": headlines, "politics": politics}
+    context = {"news2": news2,"sport2": sport2,"sport1": sport1, "fashion2": fashion2,"fashion": fashion,"entertainment": entertainment, "health1": health1, "health2": health2, "allnews": allnews, "category": category, "news": news, "headlines": headlines, "politics": politics}
     return render(request, "home.html", context)
 
 
@@ -89,5 +89,5 @@ def NewsDetails(request, id):
     response = requests.get(f'http://api.allnigerianewspapers.com.ng/api/newsdetails/{id}')
     print(response)
     newsdetails = response.json()
-    context = {"newsdetails", newsdetails}
+    context = {"newsdetails": newsdetails}
     return render(request, "news_details.html", context)
